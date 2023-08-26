@@ -1,0 +1,109 @@
+.intro-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.intro-content p {
+    font-size: 24px;
+    font-family: "Arial", sans-serif;
+}
+
+h1 {
+    padding: 20px 20px 20px 0;   /* Adjust this value to your preference */
+    font-weight: bold;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.mui-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Basic styles for the custom checkbox and label */
+.custom-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    font-size: 22px;
+    user-select: none;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border: 2px solid #555;
+    border-radius: 4px;
+    cursor: pointer; /* Cursor will change to pointer only when hovering over the checkbox */
+}
+
+/* Hover effect only for the checkmark */
+.checkmark:hover {
+    background-color: #ccc;
+}
+
+/* Styles for the editable content */
+.editable {
+    border: 1px solid transparent;
+    padding: 2px 4px;
+    display: inline-block;
+    min-width: 100px;
+}
+
+.editable:focus {
+    border-color: #2196F3;
+    outline: none;
+    background-color: #f5f5f5;
+}
+
+/* Checkmark when checkbox is checked */
+.custom-checkbox input[type="checkbox"]:checked ~ .checkmark:after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .checkmark {
+    background-color: #2196F3;
+    border-color: #2196F3;
+}
+
+.delete-button {
+    margin-left: 10px;
+    color: red;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    text-decoration: underline;
+}
+
+#idxPageIntro {
+
+}

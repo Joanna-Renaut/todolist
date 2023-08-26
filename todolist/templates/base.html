@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- load MUI -->
+    <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
+      <title>To Do List</title>
+  </head>
+  <body>
+    <div class="mui-container">
+      <div class="mui-panel">
+        <h1>Pick a day to write a to do list:</h1>
+        <div class="button-container">
+          <a href="{{ url_for('index') }}" class="mui-btn mui-btn--primary mui-btn--raised">Home</a>
+          <a href="{{ url_for('monday') }}" class="mui-btn mui-btn--primary mui-btn--raised">Monday</a>
+          <a href="{{ url_for('tuesday') }}" class="mui-btn mui-btn--primary mui-btn--raised">Tuesday</a>
+          <a href="{{ url_for('wednesday') }}" class="mui-btn mui-btn--primary mui-btn--raised">Wednesday</a>
+          <a href="{{ url_for('thursday') }}" class="mui-btn mui-btn--primary mui-btn--raised">Thursday</a>
+          <a href="{{ url_for('friday') }}" class="mui-btn mui-btn--primary mui-btn--raised">Friday</a>
+          <a href="{{ url_for('saturday') }}" class="mui-btn mui-btn--primary mui-btn--raised">Saturday</a>
+          <a href="{{ url_for('sunday') }}" class="mui-btn mui-btn--primary mui-btn--raised">Sunday</a>
+          </div>
+      </div>
+    </div>
+
+  {% block content %} {% endblock %}
+  <script>var currentDay = "{{ day }}";</script>
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+  </body>
+</html>
